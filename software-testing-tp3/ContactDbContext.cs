@@ -16,13 +16,13 @@ namespace software_testing_tp3
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite($@"Data Source=C:\Users\arsen\git\software-testing-tp3\software-testing-tp3\contacts-{DbSize}.db;");
+            optionsBuilder.UseSqlite($@"Data Source=contacts-index-{DbSize}.db;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Contact>().HasKey(contact => contact.Id);
-            modelBuilder.Entity<Contact>().Property(contact => contact.Email);
+            modelBuilder.Entity<Contact>().HasIndex(contact => contact.Email);
             modelBuilder.Entity<Contact>().Property(contact => contact.Name);
         }
     }

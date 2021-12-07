@@ -23,7 +23,7 @@ namespace software_testing_tp3
                     return acc;
                 });
 
-            File.WriteAllLines(@"C:\Users\arsen\git\software-testing-tp3\software-testing-tp3\result.csv", csvLines);
+            File.WriteAllLines(@"C:\Users\arsen\git\software-testing-tp3\software-testing-tp3\result-with-index.csv", csvLines);
         }
 
         public static long TimeQueryLast(int numberOfLinesInDb)
