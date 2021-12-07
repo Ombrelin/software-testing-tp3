@@ -16,7 +16,7 @@ namespace software_testing_tp3
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite($@"Data Source=C:\Users\arsen\git\software-testing-tp3\software-testing-tp3\contacts-{DbSize}.db;");
+            optionsBuilder.UseSqlite($@"Data Source=contacts-{DbSize}.db;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
