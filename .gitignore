@@ -1,0 +1,7 @@
+﻿software-testing-tp3/obj
+*.db
+*.db-shm
+*.db-wal
+software-testing-tp3/result.csv
+.idea
+software-testing-tp3/bin
