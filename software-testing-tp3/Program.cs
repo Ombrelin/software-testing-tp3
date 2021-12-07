@@ -17,9 +17,9 @@ namespace software_testing_tp3
             List<string> csvLines = DATABASE_SIZES
                 .Select(InsertContacts)
                 .Select(size => (size: size, time: TimeQueryLast(size)))
-                .Aggregate(new List<string> {"Records Count;Query Time"}, (acc, sizeAndTime) =>
+                .Aggregate(new List<string> {"Records Count;Query Time (ms)"}, (acc, sizeAndTime) =>
                 {
-                    acc.Add($"{sizeAndTime.size};{sizeAndTime.time}ms");
+                    acc.Add($"{sizeAndTime.size};{sizeAndTime.time}");
                     return acc;
                 });
 
