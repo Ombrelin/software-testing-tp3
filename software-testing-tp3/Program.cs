@@ -10,8 +10,22 @@ namespace software_testing_tp3
     public class Program
     {
         private static readonly int BATCH_SIZE = 100000;
-        private static readonly int[] DATABASE_SIZES = {10, 100, 10000, 50000, 100000, 1000000};
-
+        private static readonly int[] DATABASE_SIZES =         
+        {
+            10,
+            100,
+            10000,
+            50000,
+            100000,
+            200000, 
+            300000,
+            500000, 
+            600000, 
+            700000, 
+            800000, 
+            900000, 
+            1000000
+        };
         public static void Main()
         {
             List<string> csvLines = DATABASE_SIZES
